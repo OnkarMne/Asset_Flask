@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %}BCP Asset Tracker{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron text-center">
+    <div class="container">
+     <h1 class="display-4">ASSET TRACKER FOR BUSINESS CONTINUITY</h1>
+    <p class="lead">Asset Tracking for Work from home Employees</p>
+  <hr class="my-4">
+  <p>Submit Details</p>
+  <a class="btn btn-warning btn-lg" href=" {{ url_for('add') }}" role="button">Add Details</a>
+        <a class="btn btn-warning btn-lg" href=" {{ url_for('login') }}" role="button">Admin</a>
+        <a class="btn btn-warning btn-lg" href=" {{ url_for('user_search') }}" role="button">Search Details</a>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <form action="{{ url_for('update') }}" method="POST">
+      <p> Name: {{emp.employee_name}}</p>
+      <p>Current Status {{emp.status}}</p>
+       <p> employee ID : {{emp.employee_id}}</p>
+      <input hidden="hidden" name="employee_id" value="{{emp.employee_id}}" />
+      <select name="status" id="status">
+    <option value="Open">Open</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Delivered">Delivered</option>
+        </select>
+      <button type="submit">Change Status</button>
+    </form>
+</body>
+</html>

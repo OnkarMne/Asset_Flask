@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{%block title%}Search details{% endblock %}
+
+{% block content %}
+
+<h1>Search Details</h1>
+
+      {{ render_form(form) }}
+<!--<ul>-->
+
+<!--        <li>Name        :{{ result.employee_name }}</li>-->
+<!--        <li>Department  :{{ result.department }}</li>-->
+<!--        <li>Contact     :{{ result.contact }}</li>-->
+<!--        <li>Address     :{{ result.address }}</li>-->
+<!--        <li>IT REQUEST  :{{ result.it_request }}</li>-->
+<!--        <li>Status      :{{ result.status }}</li>-->
+<!--</ul>-->
+
+<table class="table table-dark table-striped table-hover">
+
+    <tr>
+        <td>Name:</td>
+        <td>{{ result.employee_name }}</td>
+    </tr>
+    <tr>
+        <td>Department:</td>
+        <td>{{ result.department }}</td>
+    </tr>
+    <tr>
+        <td>Contact:</td>
+        <td>{{ result.contact }}</td>
+    </tr>
+    <tr>
+        <td>Address:</td>
+        <td>{{ result.address }}</td>
+    </tr>
+    <tr>
+        <td>IT Request:</td>
+        <td>{{ result.it_request }}</td>
+    </tr>
+    <tr>
+        <td>Serial Number:</td>
+        <td>{{ result.serial_no }}</td>
+    </tr>
+    <tr>
+        <td>Reason:</td>
+        <td>{{ result.reason }}</td>
+    </tr>
+    <tr>
+        <td>Status:</td>
+        <td>{{ result.status }}</td>
+    </tr>
+</table>
+
+<a class= "btn btn-primary btn-lg" href="{{ url_for('home') }}">Home</a>
+
+
+{% endblock %}

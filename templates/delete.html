@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+ <form action="{{ url_for('delete') }}" method="POST">
+      <p> Name: {{emp.employee_name}}</p>
+      <p>Current Status {{emp.status}}</p>
+       <p> employee ID : {{emp.employee_id}}</p>
+     <p>Are you sure you want to delete the entry for {{ emp.employee_name }}?</p>
+      <input hidden="hidden" name="employee_id" value="{{emp.employee_id}}" />
+      <button type="submit">Change Status</button>
+    </form>
+
+</body>
+</html>
